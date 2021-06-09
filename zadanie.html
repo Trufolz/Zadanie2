@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            window.onload = function() {
+                const liczba = prompt("Podaj liczbe!");
+                let wynik = 0;
+                for (let i = 0; i < liczba.length; i++) {
+                    const dobreCyfry = [];
+                    let licznik = parseInt(liczba[i]);
+                    let cyfra = parseInt(liczba[i]);
+                    while (licznik > 0) {
+                        licznik -= 2;
+                    }
+                    if (licznik === 0 && cyfra > 4) {
+                        dobreCyfry.push(cyfra);
+                    }
+                    for (let j = 0; j < dobreCyfry.length; j++) {
+                        wynik += dobreCyfry[j];
+                    }
+                }
+                alert(wynik);
+            }
+        </script>
+    </head>
+</html>
